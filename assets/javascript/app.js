@@ -52,16 +52,20 @@ database.ref().orderByChild("dateAdded").on(
     console.log(sv.monthlyRate);
 
     var totalMonths = getTotalMonths(sv.startDate);
-    var totalBilled = totalMonths*parseInt(sv.monthlyRate);
+    var totalBilled = totalMonths * parseInt(sv.monthlyRate);
     console.log(totalBilled);
 
-    var row = $('<tr>').addClass('emplyee-data-row');
-    var nameCell = $('<td>').addClass('name').html(sv.name);
-    var roleCell = $('<td>').addClass('role').html(sv.role);
-    var startDateCell = $('<td>').addClass('start-date').html(sv.startDate);
-    var monthsWorkedCell = $('<td>').addClass('months-worked').html(totalMonths);
-    var monthlyRateCell = $('<td>').addClass('monthly-rate').html(sv.monthlyRate);
-    var totalBilledCell = $('<td>').addClass('total-billed').html(totalBilled);
+    var row = $("<tr>").addClass("emplyee-data-row");
+    var nameCell = $("<td>").addClass("name").html(sv.name);
+    var roleCell = $("<td>").addClass("role").html(sv.role);
+    var startDateCell = $("<td>").addClass("start-date").html(sv.startDate);
+    var monthsWorkedCell = $("<td>")
+      .addClass("months-worked")
+      .html(totalMonths);
+    var monthlyRateCell = $("<td>")
+      .addClass("monthly-rate")
+      .html(sv.monthlyRate);
+    var totalBilledCell = $("<td>").addClass("total-billed").html(totalBilled);
 
     row.append(nameCell);
     row.append(roleCell);
@@ -69,7 +73,7 @@ database.ref().orderByChild("dateAdded").on(
     row.append(monthsWorkedCell);
     row.append(monthlyRateCell);
     row.append(totalBilledCell);
-    $('.employee-data-body').append(row);
+    $(".employee-data-body").append(row);
     // Change the HTML to reflect
     // $(".name").html(sv.name);
     // $(".role").html(sv.role);
@@ -77,11 +81,8 @@ database.ref().orderByChild("dateAdded").on(
     // $(".monthly-rate").html(sv.monthlyRate);
     // Handle the errors
 
-
-
     // $(".months-worked").html(totalMonths);
     // $(".total-billed").html(totalBilled);
-
   },
   function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
@@ -90,17 +91,17 @@ database.ref().orderByChild("dateAdded").on(
 
 function getTotalMonths(start) {
   var todayDate = new Date();
-  var todayMonth = parseInt(todayDate.getMonth())+1;
+  var todayMonth = parseInt(todayDate.getMonth()) + 1;
   var todayYear = parseInt(todayDate.getFullYear());
 
   var split = start.split("-");
   var startYear = parseInt(split[0]);
   var startMonth = parseInt(split[1]);
 
-  var totalYearInMonths = (todayYear - startYear)*12;
+  var totalYearInMonths = (todayYear - startYear) * 12;
   var totalMonthsInCurrent = todayMonth - startMonth;
 
-  var total = totalMonthsInCurrent+totalYearInMonths;
+  var total = totalMonthsInCurrent + totalYearInMonths;
 
-  return(total);
+  return total;
 }
