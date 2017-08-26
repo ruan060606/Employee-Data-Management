@@ -57,7 +57,12 @@ database.ref().orderByChild("dateAdded").on(
     $(".monthly-rate").html(sv.monthlyRate);
     // Handle the errors
 
-    getTotalMonths($('#start_date_field').val());
+    var totalMonths = getTotalMonths();
+    var totalBilled = totalMonths*sv.monthlyRate;
+
+    $(".months-worked").html(totalMonths);
+    $(".total-billed").html(totalBilled);
+
   },
   function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
