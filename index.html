@@ -17,78 +17,87 @@
     <div class="col-lg-12">
       <div class="container">
         <div class="jumbotron">
-            <h1>Employee Data Management<small>A Comprehensive Directory of Employee Billable Hours</small></h1>
+
+            <h1>Employee Data Management<br><small>A Comprehensive Directory of Employee Billable Hours</small></h1>
         </div>
       </div>
     </div>
   </div>
-  
-    <div class="container">
-    <div class="panel-group">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Current Employees</h3>
-        </div>
-        <div class="panel-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Employee Name</th>
-                <th>Role</th>
-                <th>Start Date</th>
-                <th>Months Worked</th>
-                <th>Monthly Rate ($)</th>
-                <th>Total Billed ($)</th>
-              </tr>
-            </thead>
-            <tbody class="employee-data-body">
-              <tr class="employee-data-row">
-                <td class="name">Example</td>
-                <td class="role">Janitor</td>
-                <td class="start-date">01/01/01</td>
-                <td class="months-worked">60</td>
-                <td class="monthly-rate">100</td>
-                <td class="total-billed">6000</td>
-              </tr>
-            </tbody>
-          </table>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="container">
+          <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Current Employees</h3>
+                </div>
+                  <div class="panel-body">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Employee Name</th>
+                          <th>Role</th>
+                          <th>Start Date</th>
+                          <th>Months Worked</th>
+                          <th>Monthly Rate ($)</th>
+                          <th>Total Billed ($)</th>
+                        </tr>
+                      </thead>
+                      <tbody class="employee-data-body">
+                        <tr class="employee-data-row">
+                          <td class="name">Example</td>
+                          <td class="role">Janitor</td>
+                          <td class="start-date">01/01/01</td>
+                          <td class="months-worked">60</td>
+                          <td class="monthly-rate">100</td>
+                          <td class="total-billed">6000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div> <!-- panel-body -->
+            </div> <!-- panel-primary -->
+          </div> <!-- panel-group -->
+        </div> <!-- container -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="container">
+      		<div class="panel-group">
+      			<div class="panel panel-primary">
+      				<div class="panel-heading">
+      				    <h3 class="panel-title">Add Employee</h3>
+      				</div>
+      				<div class="panel-body">
+          					<form class="navbar-form navbar-left" role="search">
+          						<div class="form-group" id="myForm">
+                        <label>Name</label>
+                        <br>
+          					    <input type="text" class="form-control" id="name_field" placeholder="John Smith">
+                        <br>
+                        <label>Role</label>
+                        <br>
+          					    <input type="text" class="form-control" id="role_field" placeholder="Position">
+                        <br>
+                        <label>Start Date</label>
+                        <br>
+          					    <input type="date" class="form-control" id="start_date_field" placeholder="mm/dd/yyy">
+                        <br>
+                        <label>Monthly Rate</label>
+                        <br>
+          					    <input type="number" class="form-control" id="monthly_rate_field" placeholder="">
+                        <br>
+                          <button type="submit" class="btn btn-primary" id="button_submit">Submit</button>
+          					  </div>
+          					</form>
+      				</div> <!-- panel-body -->
+      			</div> <!-- panel-primary -->
+          </div> <!-- panel-group -->
         </div>
       </div>
     </div>
 
-
-		<div class="panel-group">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-				    <h3 class="panel-title">Add Employee</h3>
-				</div>
-				<div class="panel-body">
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group" id="myForm">
-              <label>Name</label>
-              <br>
-					    <input type="text" class="form-control" id="name_field" placeholder="John Smith">
-              <br>
-              <label>Role</label>
-              <br>
-					    <input type="text" class="form-control" id="role_field" placeholder="Position">
-              <br>
-              <label>Start Date</label>
-              <br>
-					    <input type="date" class="form-control" id="start_date_field" placeholder="mm/dd/yyy">
-              <br>
-              <label>Monthly Rate</label>
-              <br>
-					    <input type="number" class="form-control" id="monthly_rate_field" placeholder="">
-              <br>
-              <button type="submit" class="btn btn-primary" id="button_submit">Submit</button>
-					  </div>
-					</form>
-				</div>
-			</div>
-    </div>
-
-	</div>
 
   <script src="assets/javascript/app.js"></script>
 </body>
