@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -61,13 +59,14 @@
 				<div class="panel-body">
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
-					    <input type="text" id="name_field" placeholder="Search">
-					    <br>
-					    <input type="text" id="role_field" placeholder="Search">
-					    <br>
-					    <input type="text" id="start_date_field" placeholder="Search">
-					    <br>
-					    <input type="text" id="monthly_rate_field" placeholder="Search">
+              <label>Name:</label>
+					    <input type="text" class="form-control" id="name_field" placeholder="Search">
+              <label>Role:</label>
+					    <input type="text" class="form-control" id="role_field" placeholder="Search">
+              <label>Start Date:</label>
+					    <input type="date" class="form-control" id="start_date_field" placeholder="Search">
+              <label>Monthly Rate:</label>
+					    <input type="number" class="form-control" id="monthly_rate_field" placeholder="Search">
 					  </div>
 					  <button type="submit" id="button_submit">Submit</button>
 					</form>
