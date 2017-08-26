@@ -1,3 +1,13 @@
 .container {
   margin-top: 20px;
 }
+
+.jumbotron {
+	background-color: black;
+	color: white;
+}
+
+.jumbotron h1{
+	text-align: center;
+	font-size: 61px;
+}
