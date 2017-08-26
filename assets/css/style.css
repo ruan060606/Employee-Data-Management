@@ -1,5 +1,6 @@
 .container {
   margin-top: 0px;
+  width: 980px;
 }
 
 .jumbotron {
@@ -16,4 +17,15 @@
 	color: white;
 	text-align: center;
 	font-size: 30px;
+}
+
+.form-group .form-control {
+	width: 900px;
+	margin-bottom: 20px;
+}
+
+.form-group button {
+	background: #0d47a1;
+	color: white;
+	font-size: 20px;
 }
