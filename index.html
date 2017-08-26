@@ -11,7 +11,6 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/javascript/app.js"></script>
 
 </head>
 
@@ -23,7 +22,9 @@
     </div>
     <div class="panel-group">
       <div class="panel panel-primary">
-        <div class="panel-heading">Current Employees</div>
+        <div class="panel-heading">
+          <h3 class="panel-title">Current Employees</h3>
+        </div>
         <div class="panel-body">
           <table class="table">
             <thead>
@@ -52,31 +53,31 @@
     </div>
 
 
-	<div class="row">
-		<div class="col-lg-10">
-			<div class="container">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-					    <h3 class="panel-title">Add Employee</h3>
-					 </div>
-						 <div class="panel-body">
-							<form class="navbar-form navbar-left" role="search">
-							  <div class="form-group">
-							    <input type="text" id="name_field" " placeholder="Search">
-							    <br>
-							    <input type="text" id="role_field" " placeholder="Search">
-							    <br>
-							    <input type="text" id="start_date_field" " placeholder="Search">
-							    <br>
-							    <input type="text" id="monthly_rate_field" " placeholder="Search">
-							  </div>
-							  	<button type="submit" id="button_submit">Submit</button>
-							</form>
-						</div>
+		<div class="panel-group">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+				    <h3 class="panel-title">Add Employee</h3>
+				</div>
+				<div class="panel-body">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+					    <input type="text" id="name_field" placeholder="Search">
+					    <br>
+					    <input type="text" id="role_field" placeholder="Search">
+					    <br>
+					    <input type="text" id="start_date_field" placeholder="Search">
+					    <br>
+					    <input type="text" id="monthly_rate_field" placeholder="Search">
+					  </div>
+					  <button type="submit" id="button_submit">Submit</button>
+					</form>
 				</div>
 			</div>
-		</div>
+    </div>
+
 	</div>
+
+  <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
