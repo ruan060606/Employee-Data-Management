@@ -56,8 +56,27 @@ database.ref().orderByChild("dateAdded").on(
     $(".start-date").html(sv.startDate);
     $(".monthly-rate").html(sv.monthlyRate);
     // Handle the errors
+
+    getTotalMonths($('#start_date_field').val());
   },
   function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
   }
 );
+
+function getTotalMonths(start) {
+  var todayDate = new Date();
+  var todayMonth = parseInt(todayDate.getMonth())+1;
+  var todayYear = parseInt(todayDate.getFullYear());
+
+  var split = start.split("-");
+  var startYear = parseInt(split[0]);
+  var startMonth = parseInt(split[1]);
+
+  var totalYearInMonths = (todayYear - startYear)*12;
+  var totalMonthsInCurrent = todayMonth - startMonth;
+
+  var total = totalMonthsInCurrent+totalYearInMonths;
+
+  return(total);
+}
