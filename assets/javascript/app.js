@@ -50,18 +50,37 @@ database.ref().orderByChild("dateAdded").on(
     console.log(sv.role);
     console.log(sv.startDate);
     console.log(sv.monthlyRate);
+
+    var totalMonths = getTotalMonths(sv.startDate);
+    var totalBilled = totalMonths*parseInt(sv.monthlyRate);
+    console.log(totalBilled);
+
+    var row = $('<tr>').addClass('emplyee-data-row');
+    var nameCell = $('<td>').addClass('name').html(sv.name);
+    var roleCell = $('<td>').addClass('role').html(sv.role);
+    var startDateCell = $('<td>').addClass('start-date').html(sv.startDate);
+    var monthsWorkedCell = $('<td>').addClass('months-worked').html(totalMonths);
+    var monthlyRateCell = $('<td>').addClass('monthly-rate').html(sv.monthlyRate);
+    var totalBilledCell = $('<td>').addClass('total-billed').html(totalBilled);
+
+    row.append(nameCell);
+    row.append(roleCell);
+    row.append(startDateCell);
+    row.append(monthsWorkedCell);
+    row.append(monthlyRateCell);
+    row.append(totalBilledCell);
+    $('.employee-data-body').append(row);
     // Change the HTML to reflect
-    $(".name").html(sv.name);
-    $(".role").html(sv.role);
-    $(".start-date").html(sv.startDate);
-    $(".monthly-rate").html(sv.monthlyRate);
+    // $(".name").html(sv.name);
+    // $(".role").html(sv.role);
+    // $(".start-date").html(sv.startDate);
+    // $(".monthly-rate").html(sv.monthlyRate);
     // Handle the errors
 
-    var totalMonths = getTotalMonths();
-    var totalBilled = totalMonths*sv.monthlyRate;
 
-    $(".months-worked").html(totalMonths);
-    $(".total-billed").html(totalBilled);
+
+    // $(".months-worked").html(totalMonths);
+    // $(".total-billed").html(totalBilled);
 
   },
   function(errorObject) {
