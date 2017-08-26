@@ -21,6 +21,12 @@ $(document).ready(function() {
   var role = "";
   var startDate = "";
   var monthlyRate = "";
+
+  firebase.database.ref.once("value").then(function(snapshot) {
+    for (var key in snapshot.val()) {
+      console.log(key);
+    }
+  });
 });
 
 $buttonSubmit.on("click", function(event) {
