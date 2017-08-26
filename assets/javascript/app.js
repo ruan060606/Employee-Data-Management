@@ -39,3 +39,25 @@ $buttonSubmit.on("click", function(event) {
     dateAdded: firebase.database.ServerValue.TIMESTAMP
   });
 });
+
+database.ref().orderByChild("dateAdded").on(
+  "child_added",
+  function(snapshot) {
+    // storing the snapshot.val() in a variable for convenience
+    var sv = snapshot.val();
+    // Console.loging the last user's data
+    console.log(sv.name);
+    console.log(sv.role);
+    console.log(sv.startDate);
+    console.log(sv.monthlyRate);
+    // Change the HTML to reflect
+    $(".name").html(sv.name);
+    $(".role").html(sv.role);
+    $(".start-date").html(sv.startDate);
+    $(".monthly-rate").html(sv.monthlyRate);
+    // Handle the errors
+  },
+  function(errorObject) {
+    console.log("Errors handled: " + errorObject.code);
+  }
+);
